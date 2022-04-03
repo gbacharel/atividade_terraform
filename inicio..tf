@@ -17,7 +17,7 @@ provider "azurerm" {
 #criação na pasta no az 
 resource "azurerm_resource_group" "rg-atividadeterra" {
   name     = "atividadeterraform"
-  location = "eastus"
+  location = "brazilsouth"
 }
 
 

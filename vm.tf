@@ -1,8 +1,8 @@
-resource "azurerm_linux_virtual_machine" "vm-atividade" {
-  name                  = "vm"
+resource "azurerm_linux_virtual_machine" "vm-atividadeform" {
+  name                  = "vm-atividadeterraform"
   location              = azurerm_resource_group.rg-atividadeterra.location
   resource_group_name   = azurerm_resource_group.rg-atividadeterra.name
-  size                  = "Standard_DS1_v2"
+  size                  = "Standard_E2bs_v5"
   network_interface_ids = [azurerm_network_interface.nic-atividadeform.id]
  
  
@@ -31,3 +31,4 @@ source_image_reference {
   }
 
 }
+
