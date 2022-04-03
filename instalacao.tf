@@ -8,8 +8,8 @@ resource "null_resource" "install-webserver" {
   connection {
     type = "ssh"
     host = data.azurerm_public_ip.ip-atividadeformvar.ip_address
-    user = "adminuser"
-    password = "Password1234!"
+    user = var.user
+    password = var.password
   }
 
   provisioner "remote-exec" {
@@ -27,8 +27,8 @@ resource "null_resource" "upload-app" {
   connection {
     type = "ssh"
     host = data.azurerm_public_ip.ip-atividadeformvar.ip_address
-    user = "adminuser"
-    password = "Password1234!"
+    user = var.user
+    password = var.password
   }
 
   provisioner "file" {
@@ -40,3 +40,7 @@ resource "null_resource" "upload-app" {
     azurerm_linux_virtual_machine.vm-atividadeform
   ]
 }
+
+variable user {}
+variable password {}
+

@@ -15,8 +15,8 @@ source_image_reference {
   }
 
 
-  admin_username = "adminuser"
-  admin_password = "Password1234!"
+  admin_username = var.user
+  admin_password = var.password
   disable_password_authentication = false
 
   os_disk {
